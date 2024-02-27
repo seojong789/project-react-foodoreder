@@ -1,5 +1,6 @@
 import MealItem from './MealItem';
 import useHttp from '../hooks/useHttp';
+import Error from './Error';
 
 // requestConfig 객체를 Meals Component 외부에서 생성해야 무한루프 방지가능.
 // 해당 {} 객체는 Meals 컴포넌트 함수에서 생성
@@ -24,6 +25,10 @@ export default function Meals() {
 
   if (isLoading) {
     return <p className="center">Fetching Meals...</p>;
+  }
+
+  if (error) {
+    return <Error title="Failed to fetch Meals" message={error} />;
   }
 
   return (
