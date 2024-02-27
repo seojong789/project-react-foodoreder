@@ -269,4 +269,6 @@ h1 {
   flex-direction: column;
 
   color: pink;
+  font-size: 1rem;
+  height: 7rem;
 }
