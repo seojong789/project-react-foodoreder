@@ -261,8 +261,12 @@ h1 {
   }
 }
 
-.center {
+.center,
+.error {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  color: pink;
 }
